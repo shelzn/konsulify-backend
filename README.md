@@ -56,6 +56,22 @@ bun run dev
 
 API berjalan di `http://localhost:3000`.
 
+## Docker
+
+Build image:
+
+```bash
+docker build -t konsulify-backend .
+```
+
+Run container:
+
+```bash
+docker run --env-file .env -p 3000:3000 konsulify-backend
+```
+
+Jika database MySQL berjalan di host machine, gunakan host yang dapat diakses container, misalnya `host.docker.internal` pada `DATABASE_URL`.
+
 ## Akun Admin Development
 
 - Email: `admin@konsulify.test`
